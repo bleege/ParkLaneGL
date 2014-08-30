@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset='utf-8' />
-    <title></title>
+    <title>Park Lane GL</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.2.2/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.2.2/mapbox-gl.css' rel='stylesheet' />
@@ -14,58 +14,6 @@
 <body>
 
 <div id='map'></div>
-<!--
-<script>
-mapboxgl.accessToken = 'pk.eyJ1IjoiYmxlZWdlIiwiYSI6InRIWGRhQTgifQ.aqpWzaYuYupQd78KaSK_SA';
-mapboxgl.util.getJSON('https://www.mapbox.com/mapbox-gl-styles/styles/outdoors-v4.json', function (err, style) {
-  if (err) throw err;
-
-  style.layers.push({
-    "id": "markers",
-    "source": "markers",
-    "type": "symbol",
-    "render": {
-      "icon-image": "{marker-symbol}-12",
-      "text-field": "{title}",
-      "text-font": "Open Sans Semibold, Arial Unicode MS Bold",
-      "text-offset": [0, 0.6],
-      "text-vertical-align": "top"
-    },
-    "style": {
-      "text-size": 12
-    }
-  })});
-
-var map = new mapboxgl.Map({
-  container: 'map',
-  style: style,
-  center: [43.054, -89.443],
-  zoom: 9
-});
-
-// Add zoom and rotation controls to the map.
-map.addControl(new mapboxgl.Navigation());
-
-var geoJSON = {
-    "type": "FeatureCollection",
-    "features": [
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [43.054, -89.443]
-        },
-        "properties": {
-          "title": "571 Park Lane",
-        }
-      }
-    ]};
-
-  var markers = new mapboxgl.GeoJSONSource({ data: geoJSON });
-  map.addSource('markers', markers);
-
-</script>
--->
 
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoiYmxlZWdlIiwiYSI6InRIWGRhQTgifQ.aqpWzaYuYupQd78KaSK_SA';
@@ -114,6 +62,18 @@ mapboxgl.util.getJSON('https://www.mapbox.com/mapbox-gl-styles/styles/outdoors-v
   var markers = new mapboxgl.GeoJSONSource({ data: geoJSON });
   map.addSource('markers', markers);
 });
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-36024845-3', 'auto');
+  ga('send', 'pageview');
+
 </script>
 
 </body>
