@@ -40,7 +40,7 @@ mapboxgl.util.getJSON('https://www.mapbox.com/mapbox-gl-styles/styles/outdoors-v
     container: 'map',
     style: style,
     center: [43.054, -89.443],
-    zoom: 9
+    zoom: 12
   });
 
   var geoJSON = {
@@ -62,6 +62,8 @@ mapboxgl.util.getJSON('https://www.mapbox.com/mapbox-gl-styles/styles/outdoors-v
   var markers = new mapboxgl.GeoJSONSource({ data: geoJSON });
   map.addSource('markers', markers);
 });
+// Add zoom and rotation controls to the map.
+map.addControl(new mapboxgl.Navigation());
 </script>
 
 
